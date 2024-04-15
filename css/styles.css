@@ -1,6 +1,6 @@
 html,
 body {
-    background: url("../img/pattern.jpg") center center;
+    background: url("../img/brain.mp4") center center;
     font-size: 16px;
     font-family: "Cubano-Regular", "Arial Black";
     max-width: 100%;
@@ -36,7 +36,7 @@ body {
 .btn-outline-success {
     background-color: transparent;
     border-radius: 5px;
-    border: 1px solid rgba(19, 128, 26, 1);
+    border: 1px solid rgb(255, 140, 0);
     font-family: "Nunito-Regular";
     transition: 0.3s;
 }
@@ -47,8 +47,8 @@ body {
 .btn-outline-success:hover,
 .btn-outline-success:focus,
 .btn-outline-success:active {
-    background-color: rgba(19, 128, 36, 0.5);
-    border: 1px solid rgba(19, 128, 26, 0);
+    background-color: rgba(255, 157, 0, 0.729);
+    border: 1px solid rgba(255, 139, 6, 0.491);
     transition: 0.3s;
 }
 
@@ -75,7 +75,7 @@ body {
 }
 #main-nav li a:hover,
 #main-nav li a:active {
-    border-bottom: 1px solid rgb(2, 175, 39);
+    border-bottom: 1px solid rgb(255, 119, 0);
     color: white;
     transition: 0.3s;
 }
@@ -84,7 +84,7 @@ body {
 
 #cover {
     height: 100vh;
-    background-image: linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)),url(../img/landingpage3.jpg);
+    background-image: linear-gradient(rgba(2, 20, 93, 0.264),rgba(4, 11, 37, 0.401)),url(../img/brain.png);
     background-size: cover;
     background-position: center;
     color: white;
@@ -101,36 +101,38 @@ body {
     background: rgba(0, 0, 0, 0.4); /* press ctrl-e to open color picker */
     font-family: "Cubano-regular", "Arial Black";
     height: 100vh;
+    margin-left: -20vh;
+    width: 60vh;
     text-align: center;
 }
 
 .wall-sticker-content {
-    padding-top: 45%;
+    padding-top: 35%;
 }
 
 .moto-content {
-    margin-top:45%;
+    margin-top:50%;
 }
 .btn-primary {
     margin-bottom: 500px;
 }
 .col-md-6{
-    margin-left: 54px;
+    margin-left: 154px;
     margin-top: 80px;
 }
 .lead{
-    margin-left: -30px;
+    margin-left: -5px;
     margin-top: 120px;
 }
 .wall-sticker .lead {
-    font-size: 64px;
+    font-size: 65px;
     display: inline-block;
     text-align: left;
 }
 
 .moto {
     font-family: "Cubano-regular", "Arial Black";
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
 }
 
@@ -145,18 +147,23 @@ body {
 }
 
 .fa-arrow-down:hover {
-    color: rgba(19, 128, 36, 0.5);
+    color: rgba(67, 253, 210, 0.765);
     transition: 0.3s;
 }
 
-.bold-green {
+.bold-orange {
     font-weight: bold;
-    color: rgba(19, 128, 36, 1);
+    color: rgb(255, 174, 88);
+}
+.bold-blue {
+    font-weight: bold;
+    color: rgb(255, 110, 110);
+
 }
 
-.green-underline {
+.cyan-underline {
     text-decoration: underline;
-    text-decoration-color: rgba(19, 128, 36, 1);
+    text-decoration-color: rgb(88, 255, 224);
 }
 
 /* Features section */
@@ -181,7 +188,7 @@ body {
 }
 
 .square i:hover {
-    color: rgba(19, 128, 36, 1);
+    color:rgb(255,174,88);
     transition: 0.3s;
 }
 
@@ -191,10 +198,10 @@ body {
     font-size: 1.2rem;
 }
 
-.green-hr {
-	border-top: 1px solid rgba(19, 128, 36, 1);
-    width: 150px;
-    background-color: rgba(19, 128, 36, 1);
+.cyan-underline {
+	border-top: 1px solid rgb(91, 255, 247);
+    width: 160px;
+    background-color: rgb(91, 255, 247);
 }
 
 /* Section Timeline */
@@ -271,7 +278,7 @@ body {
     top: 16px;
     left: 50%;
     margin-left: -25px;
-    background-color: rgba(19, 128, 26, 1);
+    background-color: rgb(255, 123, 0);
     border-top-right-radius: 50%;
     border-top-left-radius: 50%;
     border-bottom-right-radius: 50%;
@@ -290,7 +297,7 @@ body {
 
 .section-parallax {
     text-align: center;
-    background: url(../img/trees.jpg) center repeat fixed;
+    background: url(../img/FIXED\ bG.jpg) center repeat fixed;
     padding: 7rem 0;
     background-size: cover;
     color: white;
@@ -327,9 +334,9 @@ body {
     transition: .3s;
 }
 
-/* Section Numbers */
+/* Section facts */
 
-.section-numbers {
+.section-facts {
     background-color: white;
     padding: 5rem;
 }
@@ -337,7 +344,7 @@ body {
 .num {
     height: 140px;
     width: 140px;
-    background-color: rgba(19, 128, 36, .90);
+    background-color: rgba(77, 183, 151, 0.9);
     border-radius: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -356,7 +363,7 @@ body {
 }
 
 .num-content:hover {
-    color: black;
+    color: rgb(0, 0, 0);
     transition: 0.3s;
 }
 .num-content1 {
@@ -533,7 +540,7 @@ footer span {
         padding: 5rem 0;
     }
     
-    .section-numbers {
+    .section-facts {
         padding: 3rem 0;
     }
     
@@ -608,9 +615,9 @@ footer span {
         width: 100%;
     }
     
-    /* Numbers */
+    /* facts */
     
-    .section-numbers {
+    .section-facts {
         padding: 5rem 1rem;
     }
     
@@ -684,8 +691,8 @@ footer span {
         padding: 3rem 0;
     }
     
-    /* Numbers */
-    .section-numbers {
+    /* facts */
+    .section-facts {
         padding: 3rem 1rem;
     }
     

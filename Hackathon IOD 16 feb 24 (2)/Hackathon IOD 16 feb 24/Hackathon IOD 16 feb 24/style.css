@@ -1,0 +1,74 @@
+/* This is the CSS code for the white and grey theme */
+
+/* General styling */
+html {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff; /* light grey */
+  background-image: url("science-background-4.png"); /* replace with your own image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+h1 {
+  color: #333333; /* dark grey */
+  text-align: center;
+}
+
+/* Paragraph styles */
+p {
+  color: #666666; /* light grey */
+  margin: 10px 0;
+}
+
+/* Link styles */
+a {
+  color: #0000ff; /* orange */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* List styles */
+ul, ol {
+  color: #666666; /* light grey */
+  margin: 20px;
+}
+
+/* Box styles for lists */
+ol {
+  border: 2px solid #ffffff; /* white */
+  box-shadow: 5px 5px 10px #333333; /* dark grey */
+  padding: 20px;
+  background-color: #ffffff; /* white */
+}
+
+/* Image styles */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #666666; /* light grey */
+  font-size: 14px;
+}

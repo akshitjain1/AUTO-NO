@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+</head>
+<style>
+    body{
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  font-family:'Times New Roman', Times, serif;
+}
+.quiz-container {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+h2{
+  text-align: center;
+  font-size: 60px;
+  padding-bottom: 30px;
+  margin: 0%;
+}
+div{
+  line-height: 40px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+}
+button{
+    margin-top: 30px;
+}
+</style>
+<body>
+  <div class="quiz-container">
+    <h2>Quiz</h2>
+    <div id="timer"></div><hr>
+    <div id="question1"></div>
+    <form id="quiz-form1">
+        Question1: What is the smallest prime number?<br>
+        <input type="radio" id="option1_1" name="answer1" value="1">
+        <label for="option1_1">2</label><br>
+        <input type="radio" id="option1_2" name="answer1" value="2">
+        <label for="option1_2">1</label><br>
+        <input type="radio" id="option1_3" name="answer1" value="3">
+        <label for="option1_3">0</label><br>
+        <input type="radio" id="option1_4" name="answer1" value="4">
+        <label for="option1_4">4</label><br>
+    </form>
+    <div id="feedback1"></div>
+
+    <!-- question2 -->
+    <div id="question2"></div>
+    <form id="quiz-form2">
+        Question2: What is the name of the closest star to Earth?<br>
+        <input type="radio" id="option2_1" name="answer2" value="1">
+        <label for="option2_1">Alpha Centauri </label><br>
+        <input type="radio" id="option2_2" name="answer2" value="2">
+        <label for="option2_2"> Proxima Centauri</label><br>
+        <input type="radio" id="option2_3" name="answer2" value="3">
+        <label for="option2_3">The Sun</label><br>
+        <input type="radio" id="option2_4" name="answer2" value="4">
+        <label for="option2_4">None of these</label><br>
+    </form>
+    <div id="feedback2"></div>
+
+<!-- question3 -->
+<div id="question3"></div>
+<form id="quiz-form3">
+Question3: What is the name of the ship that the Pilgrims came to America on?   <br>
+<input type="radio" id="option3_1" name="answer3" value="1">
+<label for="option3_1">The Endeavour</label><br>
+<input type="radio" id="option3_2" name="answer3" value="2">
+<label for="option3_2">The Mayflower</label><br>
+<input type="radio" id="option3_3" name="answer3" value="3">
+<label for="option3_3">The Titanic</label><br>
+<input type="radio" id="option3_4" name="answer3" value="4">
+<label for="option3_4">The Santa Maria</label><br>
+</form>
+<div id="feedback3"></div>
+
+<!-- question4 -->
+<div id="question4"></div>
+<form id="quiz-form4">
+Question4: There are 5 machines that make 5 parts in 5 minutes. How long does it take to make 100 parts on 100 machines? <br>
+<input type="radio" id="option4_1" name="answer4" value="1">
+<label for="option4_1">5</label><br>
+<input type="radio" id="option4_2" name="answer4" value="2">
+<label for="option4_2">10</label><br>
+<input type="radio" id="option4_3" name="answer4" value="3">
+<label for="option4_3">15</label><br>
+<input type="radio" id="option4_4" name="answer4" value="4">
+<label for="option4_4">30</label><br>
+</form>
+<div id="feedback4"></div>
+<!-- QUestion5 -->
+<div id="question5"></div>
+<form id="quiz-form1">
+Question5: What are the three primary colors?<br>
+<input type="radio" id="option4_1" name="answer4" value="1">
+<label for="option4_1">Red, Blue, and Green</label><br>
+<input type="radio" id="option4_2" name="answer4" value="2">
+<label for="option4_2"> Red, Blue, and Yellow </label><br>
+<input type="radio" id="option4_3" name="answer4" value="3">
+<label for="option4_3">Red, Green, and Yellow </label><br>
+<input type="radio" id="option4_4" name="answer4" value="4">
+<label for="option4_4">Blue, Green, and Yellow</label><br>
+</form>
+<!-- Question6 -->
+<div id="Question6"></div>
+<form id="quiz-form1">
+Question6: What is the difference between a stack and a heap in computer science?<br>
+<input type="radio" id="option4_1" name="answer4" value="1">
+<label for="option4_1"> A stack and a heap are the same data structures. </label><br>
+<input type="radio" id="option4_2" name="answer4" value="2">
+<label for="option4_2"> A stack is a heap, while a heap is a stack.</label><br>
+<input type="radio" id="option4_3" name="answer4" value="3">
+<label for="option4_3">A stack is a Last In First Out (LIFO) data structure, while a heap is a priority queue data structure.</label><br>
+<input type="radio" id="option4_4" name="answer4" value="4">
+<label for="option4_4">A stack and a heap are different types of trees</label><br>
+</form>
+
+<div id="Question7"></div>
+<form id="quiz-form1">
+  Question7: What is the difference between a static and a dynamic memory allocation in computer science?<br> <input type="radio" id="option5_1" name="answer5" value="1"> <label for="option5_1"> A static memory allocation and a dynamic memory allocation are the same types of memory allocation.</label><br> <input type="radio" id="option5_2" name="answer5" value="2"> <label for="option5_2"> A static memory allocation is a dynamic memory allocation, while a dynamic memory allocation is a static memory allocation.</label><br> <input type="radio" id="option5_3" name="answer5" value="3"> <label for="option5_3">A static memory allocation is a memory allocation that occurs at compile time, while a dynamic memory allocation is a memory allocation that occurs at runtime.</label><br> <input type="radio" id="option5_4" name="answer5" value="4"> <label for="option5_4">A static memory allocation and a dynamic memory allocation are different types of trees</label><br>
+
+</form>
+<div id="Question8"></div>
+<form id="quiz-form1">
+
+  <div id="Question7"></div> <form id="iz-form1"> Question8: Which of the following is valid way to represent a boolean value in C programming language?<br> <input type="radio" id="option5_1" name="answer5" value="1"> <label for="option5_1">int variable with a value of 0 or 1</label><br> <input type="radio" id="option5_2" name="answer5" value="2"> <label for="option5_2">float variable with a value of 0.0 or 1.0</label><br> <input type="radio" id="option5_3" name="answer5" value="3"> <label for="option5_3">char variable with a value of 'T' or 'F'</label><br> <input type="radio" id="option5_4" name="answer5" value="4"> <label for="option5_4">boolean variable with a value of true or false</label><br> </form>
+  <div id="Question9"></div> <form id="quiz-form9"> Question9: Which of the following is not a valid loop in Java?<br> <input type="radio" id="option9_1" name="answer9" value="1"> <label for="option9_1">for</label><br> <input type="radio" id="option9_2" name="answer9" value="2"> <label for="option9_2">while</label><br> <input type="radio" id="option9_3" name="answer9" value="3"> <label for="option9_3">do-while</label><br> <input type="radio" id="option9_4" name="answer9" value="4"> <label for="option9_4">repeat-until</label><br> </form>
+  <div id="Question10"></div> <form id="quiz-form10"> Question10: Which of the following is not a valid operator in C++?<br> <input type="radio" id="option10_1" name="answer10" value="1"> <label for="option10_1">+</label><br> <input type="radio" id="option10_2" name="answer10" value="2"> <label for="option10_2">-</label><br> <input type="radio" id="option10_3" name="answer10" value="3"> <label for="option10_3">*</label><br> <input type="radio" id="option10_4" name="answer10" value="4"> <label for="option10_4">^</label><br> </form>
+  <div id="Question11"></div> <form id="quiz-form11"> Question11: Which of the following is not a valid exception in Java?<br> <input type="radio" id="option11_1" name="answer11" value="1"> <label for="option11_1">ArithmeticException</label><br> <input type="radio" id="option11_2" name="answer11" value="2"> <label for="option11_2">ArrayIndexOutOfBoundsException</label><br> <input type="radio" id="option11_3" name="answer11" value="3"> <label for="option11_3">NullPointerException</label><br> <input type="radio" id="option11_4" name="answer11" value="4"> <label for="option11_4">SyntaxError</label><br> </form>
+  <div id="Question12"></div> <form id="quiz-form12"> Question12: Which of the following is not a valid method in the ArrayList class in Java?<br> <input type="radio" id="option12_1" name="answer12" value="1"> <label for="option12_1">add()</label><br> <input type="radio" id="option12_2" name="answer12" value="2"> <label for="option12_2">get()</label><br> <input type="radio" id="option12_3" name="answer12" value="3"> <label for="option12_3">remove()</label><br> <input type="radio" id="option12_4" name="answer12" value="4"> <label for="option12_4">sort()</label><br> </form> 
+  <div id="Question13"></div> <form id="quiz-form13"> Question13: Which of the following is not a valid method in the String class in Java?<br> <input type="radio" id="option13_1" name="answer13" value="1"> <label for="option13_1">length()</label><br> <input type="radio" id="option13_2" name="answer13" value="2"> <label for="option13_2">charAt()</label><br> <input type="radio" id="option13_3" name="answer13" value="3"> <label for="option13_3">substring()</label><br> <input type="radio" id="option13_4" name="answer13" value="4"> <label for="option13_4">indexOf()</label><br> </form> 
+  <div id="Question14"></div> <form id="quiz-form14"> Question14: Which of the following is not a valid method in the Math class in Java?<br> <input type="radio" id="option14_1" name="answer14" value="1"> <label for="option14_1">abs()</label><br> <input type="radio" id="option14_2" name="answer14" value="2"> <label for="option14_2">ceil()</label><br> <input type="radio" id="option14_3" name="answer14" value="3"> <label for="option14_3">floor()</label><br> <input type="radio" id="option14_4" name="answer14" value="4"> <label for="option14_4">pow()</label><br> </form>
+  <div id="Question15"></div> <form id="quiz-form15">
+    Question15: Which of the following is a valid method in the Math class in Java that returns the square root of a number?<br>
+    <input type="radio" id="option15_1" name="answer15" value="1"> <label for="option15_1">sqrt()</label><br>
+    <input type="radio" id="option15_2" name="answer15" value="2"> <label for="option15_2">cbrt()</label><br>
+    <input type="radio" id="option15_3" name="answer15" value="3"> <label for="option15_3">pow()</label><br>
+    <input type="radio" id="option15_4" name="answer15" value="4"> <label for="option15_4">none of the above</label><br>
+  </form>
+<div id="feedback4"></div>
+    <button onclick="checkAnswer()">Submit Answer</button>
+    <div id="result"></div>
+</div>
+<script src="./quiz2.js"></script>
+
+</body>
+</html>

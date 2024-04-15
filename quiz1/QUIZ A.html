@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<style>
+ body{
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  font-family:'Times New Roman', Times, serif;
+}
+.quiz-container {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+;
+}
+h2{
+  text-align: center;
+  font-size: 60px;
+  padding-bottom: 30px;
+  margin: 0%;
+}
+div{
+  line-height: 40px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+}
+button{
+    margin-top: 30px;
+}
+
+</style>
+</head>
+<body>
+<div class="quiz-container">
+    <h2>Quiz</h2>
+    <div id="timer"></div><hr>
+    
+    <!-- Question 1 -->
+    <div id="question1"></div>
+    <form id="quiz-form1">
+        Question 1: Find the total weight in the 4th image?
+        <div><img id="card1" src="./2.jpg" width="200"></div><br>
+        <input type="radio" id="option1_1" name="answer1" value="1">
+        <label for="option1_1">16</label><br>
+        <input type="radio" id="option1_2" name="answer1" value="2">
+        <label for="option1_2">20</label><br>
+        <input type="radio" id="option1_3" name="answer1" value="3">
+        <label for="option1_3">24</label><br>
+        <input type="radio" id="option1_4" name="answer1" value="4">
+        <label for="option1_4">27</label><br>
+    </form>
+    <div id="feedback1"></div>
+
+    <!-- Question 2 -->
+    <div id="question2"></div>
+    <form id="quiz-form2">
+        Question 2: Find the number of matchsticks
+        <div><img id="card2" src="./1.jpg" width="200"></div><br>
+        <input type="radio" id="option2_1" name="answer2" value="1">
+        <label for="option2_1">7</label><br>
+        <input type="radio" id="option2_2" name="answer2" value="2">
+        <label for="option2_2">8</label><br>
+        <input type="radio" id="option2_3" name="answer2" value="3">
+        <label for="option2_3">10</label><br>
+        <input type="radio" id="option2_4" name="answer2" value="4">
+        <label for="option2_4">5</label><br>
+    </form>
+    <div id="feedback2"></div>
+
+    <!-- Question 3 -->
+    <div id="question3"></div>
+    <form id="quiz-form3">
+        Question 3: Who made the mess?
+        <div><img id="card3" src="./3.jpg" width="200"></div><br>
+        <input type="radio" id="option3_1" name="answer3" value="1">
+        <label for="option3_1">Option 1</label><br>
+        <input type="radio" id="option3_2" name="answer3" value="2">
+        <label for="option3_2">Option 2</label><br>
+        <input type="radio" id="option3_3" name="answer3" value="3">
+        <label for="option3_3">Option 3</label><br>
+        <input type="radio" id="option3_4" name="answer3" value="4">
+        <label for="option3_4">Option 4</label><br>
+    </form>
+    <div id="feedback3"></div>
+
+    <!-- Question 4 -->
+    <div id="question4"></div>
+    <form id="quiz-form4">
+        Question 4: Who is pregnant?
+        <div><img id="card4" src="./4.jpg" width="200"></div><br>
+        <input type="radio" id="option4_1" name="answer4" value="1">
+        <label for="option4_1">Option 1</label><br>
+        <input type="radio" id="option4_2" name="answer4" value="2">
+        <label for="option4_2">Option 2</label><br>
+        <input type="radio" id="option4_3" name="answer4" value="3">
+        <label for="option4_3">Option 3</label><br>
+        <input type="radio" id="option4_4" name="answer4" value="4">
+        <label for="option4_4">Option 4</label><br>
+    </form>
+    <div id="feedback4"></div>
+
+    <!-- Question 5 -->
+    <div id="question5"></div>
+    <form id="quiz-form5">
+        Question 5:Who is the lier?
+        <!-- Replace image source and question text accordingly -->
+        <div><img id="card5" src="./5.jpg" width="200"></div><br>
+        <input type="radio" id="option5_1" name="answer5" value="1">
+        <label for="option5_1">Option 1</label><br>
+        <input type="radio" id="option5_2" name="answer5" value="2">
+        <label for="option5_2">Option 2</label><br>
+        <input type="radio" id="option5_3" name="answer5" value="3">
+        <label for="option5_3">Option 3</label><br>
+        <input type="radio" id="option5_4" name="answer5" value="4">
+        <label for="option5_4">Option 4</label><br>
+    </form>
+    <div id="feedback5"></div>
+
+    <button onclick="checkAnswer()">Submit Answer</button>
+    <div id="result"></div>
+</div>
+
+<script>
+    window.onload = function() {
+        let timeLeft = 90;
+        const timerDisplay = document.getElementById("timer");
+
+        function countdown() {
+            if (timeLeft > 0) {
+                timerDisplay.innerHTML = timeLeft + " seconds remaining";
+                timeLeft--;
+            } else {
+                clearInterval(timer);
+                document.getElementById("quiz-form1").disabled = true;
+                document.getElementById("quiz-form2").disabled = true;
+                document.getElementById("quiz-form3").disabled = true;
+                document.getElementById("quiz-form4").disabled = true;
+                document.getElementById("quiz-form5").disabled = true;
+                document.querySelector("button").disabled = true;
+                timerDisplay.innerHTML = "Time's up!";
+            }
+        }
+
+        const timer = setInterval(countdown, 1000);
+    };
+
+    function checkAnswer() {
+        let score = 0;
+        const feedbackMessages = {
+            question1: "EXCELLENT GOOD",
+            question2: "EXCELLENT GOOD",
+            question3: "EXCELLENT GOOD",
+            question4: "EXCELLENT GOOD",
+            question5: "EXCELLENT GOOD"
+        };
+
+        // Question 1
+        const answer1 = document.querySelector('input[name="answer1"]:checked');
+        if (answer1 && answer1.value === '4') {
+            score += 20; // Adjust score according to question difficulty
+            document.getElementById('feedback1').innerHTML = feedbackMessages.question1;
+        } else {
+            document.getElementById('feedback1').innerHTML = "Incorrect. PLEASE ANALYZE THE PICTURE ONCE AGAIN and TRY LATER.";
+        }
+
+        // Question 2
+        const answer2 = document.querySelector('input[name="answer2"]:checked');
+        if (answer2 && answer2.value === '2') {
+            score += 20; // Adjust score according to question difficulty
+            document.getElementById('feedback2').innerHTML = feedbackMessages.question2;
+        } else {
+            document.getElementById('feedback2').innerHTML = "Incorrect. PLEASE ANALYZE THE PICTURE ONCE AGAIN and TRY LATER.";
+        }
+
+        // Question 3
+        const answer3 = document.querySelector('input[name="answer3"]:checked');
+        if (answer3 && answer3.value === '2') {
+            score += 20; // Adjust score according to question difficulty
+            document.getElementById('feedback3').innerHTML = feedbackMessages.question3;
+        } else {
+            document.getElementById('feedback3').innerHTML = "Incorrect. PLEASE ANALYZE THE PICTURE ONCE AGAIN and TRY LATER.";
+        }
+
+        // Question 4
+        const answer4 = document.querySelector('input[name="answer4"]:checked');
+        if (answer4 && answer4.value === '3') {
+            score += 20; // Adjust score according to question difficulty
+            document.getElementById('feedback4').innerHTML = feedbackMessages.question4;
+        } else {
+            document.getElementById('feedback4').innerHTML = "Incorrect. PLEASE ANALYZE THE PICTURE ONCE AGAIN and TRY LATER.";
+        }
+
+        // Question 5
+        const answer5 = document.querySelector('input[name="answer5"]:checked');
+        if (answer5 && answer5.value === '2') {
+            score += 20; // Adjust score according to question difficulty
+            document.getElementById('feedback5').innerHTML = feedbackMessages.question5;
+        } else {
+            document.getElementById('feedback5').innerHTML = "Incorrect. PLEASE ANALYZE THE PICTURE ONCE AGAIN and TRY LATER.";
+        }
+
+        let result = document.getElementById('result');
+        if (score >= 100) {
+            result.innerHTML = `Congratulations! Your total score is ${score}. Passed!`;
+        } else {
+            result.innerHTML = `You need to improve. Your total score is ${score}. Please review your answers and try again.`;
+        }
+    }
+</script>
+
+</body>
+</html>
